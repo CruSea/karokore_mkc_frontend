@@ -184,6 +184,8 @@ export class MemberPreviousChurch {
     public leaving_reason: string;
     public was_member: string;
     public duration: string;
+    public previous_pastor_name: string;
+    public previous_pastor_phone: string;
     public image_url: string;
     public image_file: any;
     public image_file_name: string;
@@ -196,6 +198,8 @@ export class MemberPreviousChurch {
         this.leaving_reason = '';
         this.was_member = '';
         this.duration = '';
+        this.previous_pastor_name = '';
+        this.previous_pastor_phone = '';
         this.image_url = '';
         this.image_file = null;
         this.created_at = '';

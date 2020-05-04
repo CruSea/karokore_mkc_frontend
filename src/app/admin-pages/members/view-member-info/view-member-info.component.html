@@ -219,6 +219,14 @@
                                <input matInput  [readonly]="!editable" placeholder="የቆይታ ጊዜ" name="duration"  [(ngModel)]="selected_member_data.member_previous_church.duration" >
                            </mat-form-field>
 
+                           <mat-form-field>
+                               <input matInput  [readonly]="!editable" placeholder="የቀድሞ ቤተክርስቲያን ፓስተር ስም" name="duration"  [(ngModel)]="selected_member_data.member_previous_church.previous_pastor_name" >
+                           </mat-form-field>
+
+
+                           <mat-form-field>
+                               <input matInput  [readonly]="!editable" placeholder="የቀድሞ ቤተክርስቲያን ፓስተር ስልክ" name="duration"  [(ngModel)]="selected_member_data.member_previous_church.previous_pastor_phone" >
+                           </mat-form-field>
                        </div>
                    </div>
 

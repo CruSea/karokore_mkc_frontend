@@ -164,6 +164,7 @@
                   <mat-paginator [length]="paginated_member_data.total"
                                  [pageSize]="paginated_member_data.per_page"
                                  [pageSizeOptions]="pageSizeOptions"
+                                 [showFirstLastButtons]="true"
                                  (page)="updateMemberDataList($event)">
                   </mat-paginator>
 
@@ -211,6 +212,7 @@
                   <mat-paginator [length]="paginated_member_data.total"
                                  [pageSize]="paginated_member_data.per_page"
                                  [pageSizeOptions]="pageSizeOptions"
+                                 [showFirstLastButtons]="true"
                                  (page)="updateMemberDataList($event)">
                   </mat-paginator>
                 </div>

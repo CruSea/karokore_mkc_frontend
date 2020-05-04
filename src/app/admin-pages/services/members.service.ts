@@ -259,6 +259,8 @@ export class MembersService {
     formData.append('leaving_reason', member_data.leaving_reason);
     formData.append('was_member', member_data.was_member);
     formData.append('duration', member_data.duration);
+    formData.append('previous_pastor_phone', member_data.previous_pastor_phone);
+    formData.append('previous_pastor_name', member_data.previous_pastor_name);
 
 
       if (member_data.image_file != null) {

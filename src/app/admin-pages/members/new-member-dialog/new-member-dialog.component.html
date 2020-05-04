@@ -413,6 +413,7 @@
                 </mat-expansion-panel>
             </mat-accordion>
         </div>
+
         <div class="col-sm-12">
             <p>
                 <small>የቀድሞ የቤተ ክርስቲያን መረጃ ዝርዝር</small>
@@ -441,7 +442,15 @@
                             </mat-form-field>
                             <mat-form-field>
                                 <input matInput placeholder="የለቀቁበት ምክንያት" name="leaving_reason"
-                                       [(ngModel)]="new_member_previous_church_info.leaving_reason" required>
+                                       [(ngModel)]="new_member_previous_church_info.leaving_reason">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="የቀድሞ ቤተክርስቲያን ፓስተር ስም" name="previous_pastor_name"
+                                       [(ngModel)]="new_member_previous_church_info.previous_pastor_name">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="የቀድሞ ቤተክርስቲያን ፓስተር ስልክ" name="previous_pastor_phone"
+                                       [(ngModel)]="new_member_previous_church_info.previous_pastor_phone">
                             </mat-form-field>
                             <mat-radio-group name="was_member" [(ngModel)]="new_member_previous_church_info.was_member">
                                 <p>አባል ነበሩ?</p>
@@ -450,7 +459,7 @@
                             </mat-radio-group>
                             <mat-form-field>
                                 <input matInput placeholder="ቆይታ" name="duration"
-                                       [(ngModel)]="new_member_previous_church_info.duration" required>
+                                       [(ngModel)]="new_member_previous_church_info.duration">
                             </mat-form-field>
                             <div class="form-label-group">
                                 <label>የመሸኛ ደብዳቤ ምስል አያይዝ</label>

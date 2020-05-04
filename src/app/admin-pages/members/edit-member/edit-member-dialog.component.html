@@ -48,7 +48,7 @@
                        [(ngModel)]="selected_member.full_name" required>
               </mat-form-field>
               <mat-form-field>
-                <input matInput [readonly]="!editable" [matDatepicker]="picker2" placeholder="የየትውልድ ዘመን" name="birth_day"
+                <input matInput [matDatepicker]="picker2" placeholder="የየትውልድ ዘመን" name="birth_day"
                        [(ngModel)]="selected_member.birth_day" >
                 <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                 <mat-datepicker #picker2></mat-datepicker>
@@ -457,8 +457,19 @@
                 </mat-form-field>
                 <mat-form-field>
                   <input matInput placeholder="የለቀቁበት ምክንያት" name="leaving_reason"
-                         [(ngModel)]="new_member_previous_church_info.leaving_reason" required>
+                         [(ngModel)]="new_member_previous_church_info.leaving_reason" >
                 </mat-form-field>
+
+                <mat-form-field>
+                  <input matInput placeholder="የቀድሞ ቤተክርስቲያን ፓስተር ስም" name="previous_pastor_name"
+                         [(ngModel)]="new_member_previous_church_info.previous_pastor_name">
+                </mat-form-field>
+
+                <mat-form-field>
+                  <input matInput placeholder="የቀድሞ ቤተክርስቲያን ፓስተር ስልክ" name="previous_pastor_phone"
+                         [(ngModel)]="new_member_previous_church_info.previous_pastor_phone">
+                </mat-form-field>
+
                 <mat-radio-group name="was_member" [(ngModel)]="new_member_previous_church_info.was_member">
                   <p>አባል ነበሩ?</p>
                   <mat-radio-button value="አዎ">አዎ</mat-radio-button>&nbsp;

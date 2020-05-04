@@ -50,6 +50,8 @@ export class NewMemberDialogComponent implements OnInit, AfterViewInit {
         data => {this.user_roles_list = data; }
     );
 
+    this.new_member.nationality = "Ethiopian";
+
   }
     public updateMembersComponent() {
         this.membersService.getMembersData();
