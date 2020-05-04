@@ -8,6 +8,7 @@ import {UsersService} from '../../services/users.service';
 import {Spouse} from "../spouse-info.objects";
 import swal from 'sweetalert2';
 import {Countries} from "../countries.objects";
+import {Observable, Subject} from "rxjs";
 @Component({
   selector: 'app-new-member-dialog',
   templateUrl: './new-member-dialog.component.html',
@@ -33,6 +34,7 @@ export class NewMemberDialogComponent implements OnInit, AfterViewInit {
   public panel4 = false;
   public loading = false;
   public photo_taken = false;
+
   constructor(private membersService: MembersService,
               private _formBuilder: FormBuilder,
               private usersService: UsersService,
@@ -47,6 +49,7 @@ export class NewMemberDialogComponent implements OnInit, AfterViewInit {
     this.usersService.UserRoleListEmitter.subscribe(
         data => {this.user_roles_list = data; }
     );
+
   }
     public updateMembersComponent() {
         this.membersService.getMembersData();
@@ -101,6 +104,7 @@ export class NewMemberDialogComponent implements OnInit, AfterViewInit {
 
   public  addNewMember() {
       if (this.file_upload_event && this.file_upload_event.length > 0) {
+          this.new_member.photo_url = null;
           this.new_member.image_file = this.file_upload_event[0];
           this.new_member.image_file_name = this.file_upload_event[0].name;
           this.loading = true;
@@ -132,6 +136,7 @@ export class NewMemberDialogComponent implements OnInit, AfterViewInit {
           );
       } else {
           this.loading = true;
+          this.new_member.image_file = null;
           this.new_member.photo_url = this.image;
           console.log(this.new_member.photo_url);
           this.membersService.addNewMember2(this.new_member).subscribe(
@@ -197,12 +202,6 @@ export class NewMemberDialogComponent implements OnInit, AfterViewInit {
   public ngAfterViewInit() {
       // const binaryData = [];
 
-    if( navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
-        this.video.nativeElement.srcObject = stream;
-        this.video.nativeElement.play();
-      });
-    }
   }
 
     public  addChildInfo() {

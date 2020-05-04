@@ -218,6 +218,16 @@ export class EditMemberDialogComponent implements OnInit, AfterViewInit {
            this.child_update_state = true;
          this.selected_member_child = selected_child;
      }
+
+     public confirmChild(){
+         swal(
+             {
+                 title: 'Member Child Info Updated!!',
+                 text: 'Child Info Updated Successfully.',
+                 type: 'success',
+                 confirmButtonColor: '#DD6B55'
+             });
+     }
     public  updateChildInfo() {
           this.loading = true;
         this.selected_member_child.member_id = this.selected_member.id;

@@ -17,7 +17,7 @@
                           <input matInput [readonly]="!editable" placeholder="ሙሉ ስም" name="full_name"  [(ngModel)]="selected_member_data.full_name" >
                         </mat-form-field>
                         <mat-form-field>
-                          <input matInput [readonly]="!editable"  placeholder="የልደት ቦታ"
+                          <input matInput [readonly]="!editable"  placeholder="የልደት ቀን"
                                  name="birth_day" [(ngModel)]="selected_member_data.birth_day">
                         </mat-form-field>
                         <mat-form-field>
@@ -173,7 +173,7 @@
                          <tr *ngFor="let childrens of selected_member_data.children; let i = index" class="zoom" style="cursor: pointer;">
                              <td> {{ i + 1}} </td>
                              <td> <strong>{{childrens.full_name}}</strong></td>
-                             <td> {{childrens.birthday}} </td>
+                             <td> {{childrens.birthday | date: 'dd/MM/yyyy'}} </td>
                              <td> {{childrens.gender}} </td>
                              <!--<td class="td-actions">-->
                                  <!--<button mat-raised-button type="button" matTooltip="Remove Public User"-->

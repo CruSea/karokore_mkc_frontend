@@ -19,12 +19,12 @@
                         </mat-panel-description>
                     </mat-expansion-panel-header>
                     <div class="row">
+
                         <div class="col-sm-3">
                             <mat-card>
                                 <div [hidden]="!photo_taken">
-                                <canvas  #canvas id="canvas" width="180" height="180" class="form-group"></canvas>
+                                    <canvas  #canvas id="canvas" width="180" height="180" class="form-group"></canvas>
                                 </div>
-                                <!--<div class="col-sm-1">-->
                                 <div id="app">
                                     <div [hidden]="photo_taken">
                                         <video #video id="video" width="180" height="180" autoplay></video>
@@ -42,13 +42,15 @@
                             <br>
                             <br>
                         </div>
+
+
                         <div class="col-sm-2">
                             <mat-form-field>
                                 <input matInput placeholder="ሙሉ ስም" name="full_name"
                                        [(ngModel)]="new_member.full_name" required>
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput [readonly]="!editable" [matDatepicker]="picker2" placeholder="የየትውልድ ዘመን" name="birth_day"
+                                <input matInput  [matDatepicker]="picker2" placeholder="የየትውልድ ዘመን" name="birth_day"
                                        [(ngModel)]="new_member.birth_day" >
                                 <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                                 <mat-datepicker #picker2></mat-datepicker>
@@ -82,10 +84,6 @@
                                 <mat-select placeholder="ዜግነት" name="nationality" [(ngModel)]="new_member.nationality" >
                                     <mat-option *ngFor="let list of countries.list" value="{{list.nationality}}">{{list.nationality}}</mat-option>
                                 </mat-select>
-                            </mat-form-field>
-
-                            <mat-form-field>
-                                <input matInput placeholder="ከተማ" name="city" [(ngModel)]="new_member.city" required>
                             </mat-form-field>
 
                             <mat-form-field>
@@ -214,6 +212,9 @@
                 </mat-expansion-panel>
             </mat-accordion>
         </div>
+
+
+
         <div class="col-sm-12">
             <p>
                 <small>የትዳር ጓደኛ መረጃ ዝርዝር</small>
@@ -264,7 +265,7 @@
                             </mat-form-field>
 
                             <mat-form-field>
-                                <input matInput placeholder="ስልክ ቁጥር" name="spouse_phone_cell"
+                                <input matInput placeholder="ስልክ ቁጥር" required name="spouse_phone_cell"
                                        [(ngModel)]="new_member_spouse_info.phone_cell" pattern='^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'/>
                             </mat-form-field>
                         </div>
@@ -282,7 +283,7 @@
                             </mat-form-field>
                             <mat-form-field>
                                 <input matInput placeholder="አድራሻ" name="spouse_address"
-                                       [(ngModel)]="new_member_spouse_info.address" required>
+                                       [(ngModel)]="new_member_spouse_info.address">
                             </mat-form-field>
                         </div>
                         <div class="col-sm-3">
