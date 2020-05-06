@@ -6,8 +6,8 @@ import {HttpClient} from '@angular/common/http';
 })
 export class HttpRequestService {
 
-    public root_url = 'https://api.karakoremkc.agelgel.net/'; // Production URL
-    // public root_url = 'http://127.0.0.1:8000/'; // Production URL
+    // public root_url = 'https://api.karakoremkc.agelgel.net/'; // Production URL
+    public root_url = 'http://127.0.0.1:8000/'; // Production URL
   public admin_url = this.root_url + 'api/';
 
   constructor(private httpRequest: HttpClient) { }

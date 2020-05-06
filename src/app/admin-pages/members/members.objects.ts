@@ -114,6 +114,8 @@ export class PaginatedMembers {
         this.to = 0;
     }
 }
+
+
 export class Spouse {
     public id: number;
     public member_id: number;
@@ -125,6 +127,7 @@ export class Spouse {
     public email: string;
     public birth_day: string;
     public occupation: string;
+    public is: string;
     public employment_place: string;
     public employment_position: string;
     public gender: string;
@@ -135,6 +138,8 @@ export class Spouse {
     public baptized_date: string;
     public created_at: string;
     public updated_at: string;
+    public is_member: string;
+
     constructor() {
         this.id = null;
         this.member_id = null;
@@ -156,6 +161,7 @@ export class Spouse {
         this.baptized_date = '';
         this.created_at = '';
         this.updated_at = '';
+        this.is_member = '0';
     }
 }
 export class Children {
