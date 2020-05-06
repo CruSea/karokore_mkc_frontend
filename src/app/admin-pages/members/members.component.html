@@ -161,10 +161,33 @@
                   <!--</div>-->
 
                   <!--<button mat-button (click)="ImportMembers()">Import</button>-->
+
+
+                  <div class="dropdown pull-right ">
+                    <a class="dropdown-toggle"  id="dropDownItemSize" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Item Size
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropDownItemSize">
+                      <a class="dropdown-item"  (click)="getPageWithNum(5)">
+                        5
+                      </a>
+                      <a class="dropdown-item"  (click)="getPageWithNum(10)">
+                        10
+                      </a>
+                      <a class="dropdown-item"  (click)="getPageWithNum(20)">
+                        20
+                      </a>
+                      <a class="dropdown-item"  (click)="getPageWithNum(30)">
+                        30
+                      </a>
+                    </div>
+                  </div>
+
                   <mat-paginator [length]="paginated_member_data.total"
                                  [pageSize]="paginated_member_data.per_page"
                                  [pageSizeOptions]="pageSizeOptions"
                                  [showFirstLastButtons]="true"
+                                 [hidePageSize]="true"
                                  (page)="updateMemberDataList($event)">
                   </mat-paginator>
 

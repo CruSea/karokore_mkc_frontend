@@ -21,6 +21,14 @@ export class MembersService {
             error => { console.log(error); },
         );
   }
+
+    public getPaginatedMembersWithNum(pageNum: number ) {
+        return this.httpService.sendGetRequest('members?PAGINATE_SIZE=' + pageNum + '&token=' + this.authService.getUserToken())
+            .subscribe(
+                data => { this.processGetPaginatedMembers(data); console.log('members: ', data)},
+                error => { console.log(error); },
+            );
+    }
     public getPaginatedSearchMembers(searchText: string ) {
         return this.httpService.sendGetRequest('search_members?search=' +  searchText + '&token=' + this.authService.getUserToken())
             .subscribe(

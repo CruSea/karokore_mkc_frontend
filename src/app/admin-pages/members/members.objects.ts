@@ -1,8 +1,7 @@
 /**
- * Created by BENGEOS on 11/28/18.
+ * Created by Rog on 11/28/18.
  */
 export class Member {
-
     public id: number;
     public full_name: string;
     public member_id: string;

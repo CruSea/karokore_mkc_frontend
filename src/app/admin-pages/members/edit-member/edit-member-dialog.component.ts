@@ -191,9 +191,9 @@ export class EditMemberDialogComponent implements OnInit, AfterViewInit {
   }
   public  updateSpouseInfo() {
       this.loading = true;
-      this.selected_member.spouse = this.new_member_spouse_info;
-        this.selected_member.spouse.member_id = this.selected_member.id;
-        this.membersService.updateSpouseInfo(this.selected_member.spouse).subscribe(
+      // this.selected_member.spouse = this.new_member_spouse_info;
+        this.new_member_spouse_info.member_id = this.selected_member.id;
+        this.membersService.updateSpouseInfo(this.new_member_spouse_info).subscribe(
             data => {this.updateMembersComponent(); this.loading = false;
                 swal(
                     {

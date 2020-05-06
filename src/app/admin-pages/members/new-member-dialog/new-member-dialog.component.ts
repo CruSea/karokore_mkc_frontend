@@ -266,6 +266,8 @@ export class NewMemberDialogComponent implements OnInit, AfterViewInit {
     }
     public editDone(){
       localStorage.removeItem('pjh_Member_id');
+      this.dialogRef.close();
+
     }
     public capture() {
         const context = this.canvas.nativeElement.getContext('2d').drawImage(this.video.nativeElement, 0, 0, 180, 140);

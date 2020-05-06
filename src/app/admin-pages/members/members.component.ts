@@ -61,8 +61,12 @@ export class MembersComponent implements OnInit {
           this.memberService.getMembershipRequests();
       }
     this.memberService.getPaginatedMembers(this.paginated_member_data);
-
   }
+
+  public getPageWithNum(page: number){
+      this.memberService.getPaginatedMembersWithNum(page);
+  }
+
     public updateMemberDataList(event: any) {
         console.log(event);
         const page_num = event.pageIndex + 1;

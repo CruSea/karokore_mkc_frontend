@@ -1,3 +1,4 @@
+
 export class Spouse {
     public id: number;
     public member_id: number;
@@ -18,6 +19,8 @@ export class Spouse {
     public address: string;
     public created_at: string;
     public updated_at: string;
+    public is_member: string;
+
     constructor() {
         this.id = null;
         this.member_id = null;
@@ -38,6 +41,7 @@ export class Spouse {
         this.address = '';
         this.created_at = '';
         this.updated_at = '';
+        this.is_member = '0';
     }
 }
 export class PaginatedSpouse {

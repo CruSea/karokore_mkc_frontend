@@ -325,6 +325,15 @@
                                 <mat-datepicker #pickerSpBapDa></mat-datepicker>
                             </mat-form-field>
                         </div>
+
+                        <div class="col-sm-6">
+                            <br>
+                            <mat-radio-group name="spouse_is_baptized" [(ngModel)]="new_member_spouse_info.is_member">
+                                <p class="d-inline">Is Member</p>&nbsp;
+                                <mat-radio-button value="1">አዎ</mat-radio-button>&nbsp;
+                                <mat-radio-button value="0">አይ</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
                     </div>
                     <div class="form-label-group">
                         <br>
@@ -452,11 +461,13 @@
                                 <input matInput placeholder="የቀድሞ ቤተክርስቲያን ፓስተር ስልክ" name="previous_pastor_phone"
                                        [(ngModel)]="new_member_previous_church_info.previous_pastor_phone">
                             </mat-form-field>
+
                             <mat-radio-group name="was_member" [(ngModel)]="new_member_previous_church_info.was_member">
                                 <p>አባል ነበሩ?</p>
                                 <mat-radio-button value="አዎ">አዎ</mat-radio-button>&nbsp;
                                 <mat-radio-button value="አይ">አይ</mat-radio-button>
                             </mat-radio-group>
+
                             <mat-form-field>
                                 <input matInput placeholder="ቆይታ" name="duration"
                                        [(ngModel)]="new_member_previous_church_info.duration">

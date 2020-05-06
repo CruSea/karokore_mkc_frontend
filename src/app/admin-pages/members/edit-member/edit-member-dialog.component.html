@@ -316,6 +316,17 @@
                 <mat-datepicker #pickerSpBapDa></mat-datepicker>
               </mat-form-field>
             </div>
+
+
+            <div class="col-sm-6">
+              <br>
+              <mat-radio-group name="spouse_is_baptized" [(ngModel)]="new_member_spouse_info.is_member">
+                <p class="d-inline">Is Member</p>&nbsp;
+                <mat-radio-button value="1">አዎ</mat-radio-button>&nbsp;
+                <mat-radio-button value="0">አይ</mat-radio-button>
+              </mat-radio-group>
+            </div>
+
           </div>
           <div class="form-label-group">
             <br>
